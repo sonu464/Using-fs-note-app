@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoTe</title>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+  </head>
+  <body>
+    <div>
+      <nav class="navbar">
+        <h3 class="note">Create you notes</h3>
+        <a class="noteGoBack" href="/">Go Back</a>
+      </nav>
+      <form class="form-container" action="/edit" method="post">
+        <div class="inputField">
+          <input
+            class="titleInput hidden"
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Heading"
+            value="<%= filename%>"
+          />
+          <input
+            class="titleInput"
+            type="text"
+            id="title"
+            name="newTitle"
+            placeholder="New file name"
+          />
+          <textarea
+            class="messageInput updateMessage"
+            id="message"
+            name="newMessage"
+            rows="4"
+            required
+          >
+<%= filedata%></textarea
+          >
+
+          <input
+            type="submit"
+            value="Update"
+            class="submitBtn"
+            id="submitBtn"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- <script src="/javascript/index.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Note</title>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h3 class="note">Create you notes</h3>
+      <a class="noteGoBack" href="/">Go Back</a>
+    </nav>
+    <form class="form-container" action="/create" method="post">
+      <div class="inputField">
+        <input
+          class="titleInput"
+          type="text"
+          id="title"
+          name="title"
+          required
+          placeholder="Heading"
+        />
+        <textarea
+          class="messageInput"
+          id="message"
+          name="message"
+          rows="4"
+          required
+        ></textarea>
+
+        <input type="submit" value="Submit" class="submitBtn" id="submitBtn" />
+      </div>
+    </form>
+    <script src="/javascript/index.js"></script>
+  </body>
+</html>

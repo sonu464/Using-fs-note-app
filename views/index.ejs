@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoTe</title>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+  </head>
+  <body>
+    <div>
+      <h2 class="all-note">All notes</h2>
+      <div class="allNotes">
+        <% if(files.length >0){ %> <% files.forEach((val)=>{ %>
+        <div class="userNote">
+          <h2><%= val%></h2>
+          <a href="/show/<%= encodeURIComponent(val) %>">Show more</a>
+          <a href="/delete/<%= encodeURIComponent(val) %>">Delete</a>
+        </div>
+
+        <% }) %> <% } else {%>
+
+        <h3>Empty +_+</h3>
+        <% }%>
+      </div>
+      <a href="/addnote" id="addNote">+</a>
+    </div>
+    <script src="/javascript/index.js"></script>
+  </body>
+</html>
